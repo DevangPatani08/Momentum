@@ -1,0 +1,141 @@
+{
+    "data": {
+        "how" : [
+            {
+                "step": "1",
+                "title": "Sign Up",
+                "text": "Create your free account in seconds."
+            },
+            {
+                "step": "2",
+                "title": "Add Tasks",
+                "text": "Create task with priorities and deadlines."
+            },
+            {
+                "step": "3",
+                "title": "Organize",
+                "text": "Tasks automatically sort by priority and status."
+            },
+            {
+                "step": "4",
+                "title": "Complete",
+                "text": "Mark tasks as done and track your progress."
+            }
+        ],
+        "whyus": [
+            {
+                "icon": "ListChecks",
+                "title": "Priority Management",
+                "text": "Organize tasks by priority levels (High, Medium, Low) and focus on what matters most."
+            },
+            {
+                "icon": "CalendarDays",
+                "title": "Deadline Tracking",
+                "text": "Set and track deadlines to ensure you never miss an important due date."
+            },
+            {
+                "icon": "ShieldUser",
+                "title": "Personal Workspace",
+                "text": "Your own secure space where only you can access and manage your tasks."
+            }
+        ],
+        "about": [
+            {
+                "icon": "Users",
+                "title": "50K+",
+                "text": "Active Users",
+                "color": "bg-sky-200 text-sky-500"
+            },
+            {
+                "icon": "CircleCheckBig",
+                "title": "2M+",
+                "text": "Tasks Completed",
+                "color": "bg-green-200 text-green-500"
+            },
+            {
+                "icon": "Earth",
+                "title": "120+",
+                "text": "Countries",
+                "color": "bg-purple-200 text-purple-500"
+            },
+            {
+                "icon": "Star",
+                "title": "4.8/5",
+                "text": "User Rating",
+                "color": "bg-orange-200 text-orange-500"
+            }
+        ],
+        "team": [
+            {
+                "img": "https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80",
+                "name": "Augustina Midgett",
+                "position": "Chief Executive Officer",
+                "description": "Gravida diam enim sed ut mi. Est in sit sed tincidunt.",
+                "linkedIn": "/",
+                "twitter": "/",
+                "facebook": "/"
+            },
+            {
+                "img": "https://img.freepik.com/premium-photo/handsome-businessman-suit-white_251136-57379.jpg?ga=GA1.1.1598710842.1750049441&semt=ais_hybrid&w=740&q=80",
+                "name": "Jason Jordan",
+                "position": "Chief Operating Officer",
+                "description": "Enim ornare sit in velit metus vitae varius. Risus habitant ipsum arcu vivamus malesuada quam nulla.",
+                "linkedIn": "/",
+                "twitter": "/",
+                "facebook": "/"
+            },
+            {
+                "img": "https://img.freepik.com/premium-photo/confident-businesswoman-suit-isolated-white-background_351254-1138.jpg?ga=GA1.1.1598710842.1750049441&amp;semt=ais_hybrid&amp;w=740&amp;q=80",
+                "name": "Marx Hershey",
+                "position": "Chief Financial Officer",
+                "description": "Eu et tellus sit in risus varius. Fermentum turpis arcu tincidunt scelerisque amet nunc in.",
+                "linkedIn": "/",
+                "twitter": "/",
+                "facebook": "/"
+            },
+            {
+                "img": "https://img.freepik.com/premium-photo/portrt-handsome-muslim-arabic-man-black-suit_1358627-24326.jpg?ga=GA1.1.1598710842.1750049441&amp;semt=ais_hybrid&amp;w=740&amp;q=80",
+                "name": "Kevin Tsosie",
+                "position": "Chief Marketing Officer",
+                "description": "Felis aliquam sem ullamcorper fermentum non ultrices feugiat.",
+                "linkedIn": "/",
+                "twitter": "/",
+                "facebook": "/"
+            }
+        ],
+        "faqs": [
+            {
+                "question": "How os Momentum different from other to-do list applications?",
+                "answer": "While other apps focus on managing lists, Momentum is built to build velocity. We cut out the complexity and clutter that gets in the way of actual productivity. Our intuitive design, focus on visual progress, and features like Flow State™ help you move from planning to doing, turning your tasks into a cascade of accomplishment. It’s not just about checking boxes—it’s about building unstoppable momentum."
+            },
+            {
+                "question": "Is my data safe and secure with Momentum?",
+                "answer": "Absolutely. The security and privacy of your data are our top priorities. We use industry-standard encryption (both in transit and at rest) to protect all your tasks and personal information. We never sell your data, and you always own what you create. You can learn more about our commitment to your privacy in our detailed [Privacy Policy]."
+            },
+            {
+                "question": "Can I use Momentum with my team?",
+                "answer": "Yes! While Momentum is powerful for individuals, it's also brilliant for teams. Our Momentum for Teams plan allows you to share projects, assign tasks, and track collective progress—all while maintaining the same clean, intuitive interface. It’s designed to help your entire team build momentum together without the usual friction of project management tools."
+            }
+        ],
+        "contact": [
+            {
+                "icon": "Mail",
+                "title": "Email",
+                "text": "Drop us a line! Our team reads every message and aims to respond within 24 hours.",
+                "label": "devang.patani0806@gmail.com"
+            },
+            {
+                "icon": "Video",
+                "title": "Live Chat",
+                "text": "Prefer to talk it out? Schedule a call with our support team.",
+                "label": "WhatsApp Me"
+            },
+            {
+                "icon": "Phone",
+                "title": "Phone",
+                "text": "Get instant answers from our team during business hours.",
+                "label": "(+91) 97572-46416"
+            }
+        ]
+    }
+}
