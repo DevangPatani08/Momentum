@@ -90,7 +90,7 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit}) => {
                         <div className="mb-4">
                             <label htmlFor="message" className='block text-sm font-medium text-slate-700 mb-2'>Message<span className='text-red-500'>*</span></label>
                             <textarea name='message' id='message' value={formData.message} onChange={handleChange} placeholder='Type message here...' rows={3} className={`w-full p-3 text-slate-600 focus:text-slate-700 bg-white border rounded-md focus:outline-none focus:border-transparent focus:ring-2 focus: ring-indigo-500 ${errors.message ? 'border-red-500' : 'border-slate-300'}`} maxLength={500} required />
-                            <span className='w-full text-right text-xs mt-1 text-slate-600'>{formData.message.length}/500</span>
+                            <p className='w-full h-auto text-right text-xs mt-1 text-slate-600'>{formData.message.length}/500</p>
                         </div>
                         <div className="mb-4">
                             <label htmlFor="priority" className='block text-sm font-medium text-slate-700 mb-2'>Priority<span className='text-red-500'>*</span></label>
