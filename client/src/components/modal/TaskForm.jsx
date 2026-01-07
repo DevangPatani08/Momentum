@@ -89,7 +89,8 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit}) => {
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label htmlFor="message" className='block text-sm font-medium text-slate-700 mb-2'>Message<span className='text-red-500'>*</span></label>
-                            <textarea name='message' id='message' value={formData.message} onChange={handleChange} placeholder='Type message here...' rows={3} className={`w-full p-3 text-slate-600 focus:text-slate-700 bg-white border rounded-md focus:outline-none focus:border-transparent focus:ring-2 focus: ring-indigo-500 ${errors.message ? 'border-red-500' : 'border-slate-300' }`} maxLength={500} required />
+                            <textarea name='message' id='message' value={formData.message} onChange={handleChange} placeholder='Type message here...' rows={3} className={`w-full p-3 text-slate-600 focus:text-slate-700 bg-white border rounded-md focus:outline-none focus:border-transparent focus:ring-2 focus: ring-indigo-500 ${errors.message ? 'border-red-500' : 'border-slate-300'}`} maxLength={500} required />
+                            <span className='w-full text-right text-xs mt-1 text-slate-600'>{formData.message.length}/500</span>
                         </div>
                         <div className="mb-4">
                             <label htmlFor="priority" className='block text-sm font-medium text-slate-700 mb-2'>Priority<span className='text-red-500'>*</span></label>
@@ -101,7 +102,7 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit}) => {
                         </div>
                         <div className="mb-4">
                             <label htmlFor="deadline" className='block text-sm font-medium text-slate-700 mb-2'>Deadline<span className='text-red-500'>*</span></label>
-                            <input type="datetime-local" name="deadline" id="deadline" value={formData.deadline} onChange={handleChange} className={`w-full p-3 text-slate-600 focus:text-slate-700 border bg-white rounded-md text-base focus:outline-none focus:ring-indigo-500 focus:border-transparent ${errors.message ? 'border-red-500' : 'border-slate-300'}`} required />
+                            <input type="datetime-local" name="deadline" id="deadline" value={formData.deadline} onChange={handleChange} className={`w-full p-3 text-slate-600 focus:text-slate-700 border bg-white rounded-md text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${errors.message ? 'border-red-500' : 'border-slate-300'}`} required />
                             <Activity mode={errors.deadline ? 'visible' : 'hidden'}><span className='w-full mt-1 text-xs text-right text-red-500'>{errors.deadline}</span></Activity>
                         </div>
                         <div className='flex items-center justify-end gap-6 pt-6 pb-2'>
