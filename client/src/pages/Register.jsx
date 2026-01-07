@@ -142,7 +142,7 @@ const Register = () => {
 
                         <Buttons type='submit' variant="primaryFW" disabled={loading}>
                             {loading ? (
-                                <span className="w-full h-auto flex items-center justify-center gap-0">
+                                <span className="w-full h-auto flex items-center justify-center gap-2">
                                     <Oval width={20} height={20} color="#FFFFFF" />
                                     <span>Processing</span>
                                 </span>

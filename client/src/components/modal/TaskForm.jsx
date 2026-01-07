@@ -1,6 +1,7 @@
 import { Activity, useEffect, useState } from 'react'
 import Text from '../Text';
 import Buttons from '../Buttons';
+import { format, parseISO, formatISO } from 'date-fns';
 
 const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
     const [formData, setFormData] = useState({ message: '', priority: 'on-convenience', deadline: '' });
@@ -10,19 +11,13 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
         const formatDD = (dateValue) => {
             if (!dateValue) return '';
 
-            const deadline = new Date(dateValue);
-
-            if (!deadline) return '';
-
-            const y = deadline.getFullYear();
-            const m = String(deadline.getMonth() + 1).padStart(2, '0');
-            const d = String(deadline.getDate()).padStart(2, '0');
-            const hr = String(deadline.getHours()).padStart(2, '0');
-            const min = String(deadline.getMinutes()).padStart(2, '0');
-
-            const formattedDeadline = !isNaN(deadline.getTime()) ? `${y}-${m}-${d}T${hr}:${min}` : '';
-
-            return formattedDeadline;
+            try {
+                const date = parseISO(dateValue);
+                return format(date, "yyyy-MM-dd'T'HH:mm");
+            } catch (err) {
+                console.error(`Error formatting date: ${err}`);
+                return '';
+            }
         };
 
         const fake = () => {  
@@ -72,7 +67,7 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
         if (!formValidation()) return;
 
         try {
-            await onSubmit(formData);
+            await onSubmit({...formData, deadline: formatISO(new Date(formData.deadline))});
             onClose();
         } catch (err) {
             console.error(`Submission Error: ${err}`);
