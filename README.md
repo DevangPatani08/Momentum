@@ -4,7 +4,7 @@ A full-stack todo application with modern features, beautiful UI, and robust fun
 
 ![Momentum](client/src/assets/Screenshot.png)
 
-### Live Demo: [Visit Website](https://momentum-app-brown.vercel.app/)
+### Live Demo: [Visit Website](https://momentum-beta-six.vercel.app/)
 
 ## Authors
 
@@ -319,7 +319,7 @@ If you have any questions or need help:
 
 <h2 style='border: none; text-decoration: none;'>🌐 Live Demo</h2>
 
-<a href="https://momentum-app-brown.vercel.app/"><strong>Visit Live Application</strong></a>
+<a href="https://momentum-beta-six.vercel.app/"><strong>Visit Live Application</strong></a>
 
 <h2 style='border: none; text-decoration: none;'>📞 Support</h2>
 
