@@ -44,7 +44,7 @@ const Tasks = () => {
                 <div className="wrapper flex-1 flex flex-col jusitfy-center items-start h-full">
                     <div className="w-full px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="w-full md:w-fit text-center md:text-left">
-                            <Text variant='h3' weight='bold'>Welcome <span className='text-indigo-500'>{`${user.firstName}`}</span></Text>
+                            <Text variant='h3' weight='bold'>Welcome <span className='text-indigo-500'>{`${user.firstName} ${user.lastName}`}</span></Text>
                             <Text className='text-slate-600'>Organize your tasks and boost your productivity.</Text>
                         </div>
 
