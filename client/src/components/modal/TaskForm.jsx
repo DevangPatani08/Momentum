@@ -2,10 +2,12 @@ import { Activity, useEffect, useState } from 'react'
 import Text from '../Text';
 import Buttons from '../Buttons';
 import { format, parseISO, formatISO } from 'date-fns';
+import { Oval } from 'react-loader-spinner';
 
-const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
+const TaskForm = ({ isOpen, onClose, task, mode, onSubmit}) => {
     const [formData, setFormData] = useState({ message: '', priority: 'on-convenience', deadline: '' });
     const [errors, setErrors] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const formatDD = (dateValue) => {
@@ -26,7 +28,7 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
             } else {
                 setFormData({ message: '', priority: 'on-convenience', deadline: '' });
             }
-            
+
             setErrors({});
         };
 
@@ -67,10 +69,13 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
         if (!formValidation()) return;
 
         try {
+            setIsLoading(true);
             await onSubmit({...formData, deadline: formatISO(new Date(formData.deadline))});
             onClose();
         } catch (err) {
             console.error(`Submission Error: ${err}`);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -101,7 +106,18 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
                         </div>
                         <div className='flex items-center justify-end gap-6 pt-6 pb-2'>
                             <Buttons type='button' variant='bgNone' handleClick={onClose}>Cancel</Buttons>
-                            <Buttons type='submit' variant='primary'>{mode === 'create' ? 'Create Task' : 'Update Task'}</Buttons>
+                            <Buttons type='submit' variant='primary' disabled={isLoading}>
+                                {mode === 'create' ? (
+                                    <>
+                                        {isLoading ? (
+                                            <div className='flex items-center justify-center gap-2'>
+                                                <Oval width={20} height={20} color='#FFFFFF' />
+                                                <span>Processing</span>
+                                            </div>                                            
+                                        ) : 'Create Task'}
+                                    </>
+                                ) : 'Update Task'}
+                            </Buttons>
                         </div>
                     </form>
                 </div>
