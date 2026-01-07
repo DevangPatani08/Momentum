@@ -32,7 +32,7 @@ const Home = () => {
                     <div className="w-full flex items-center justify-center flex-wrap">
                         <div className="w-fit xl:w-wax h-fit flex items-center justify-center gap-0">
                             <Text variant='h1' weight='bold'>Stop Juggling</Text>
-                            <DotLottieReact src='https://lottie.host/4b3148df-4e4c-4537-93c9-9d0885ce6532/m9uj411IcR.lottie' loop autoplay className='w-auto h-20 md:h-30 object-cover -mx-8' />
+                            <DotLottieReact src='https://lottie.host/8e7aa899-746d-4c05-9c57-e2255cec29d4/Oxlx66JmFy.lottie' loop autoplay className='w-auto h-20 md:h-30 object-cover -mx-8' />
                         </div>
                         <Text variant='h1' weight='bold'>your tasks,</Text>
                     </div>
@@ -42,7 +42,7 @@ const Home = () => {
                     <div className="w-full flex items-center justify-center flex-wrap">
                         <div className="w-fit xl:w-wax h-fit flex items-center justify-center gap-0">
                             <Text variant='h1' weight='bold'>Flow and</Text>
-                            <DotLottieReact src='https://lottie.host/b94836c3-a7e0-4005-bea0-aa910942d79d/AwYkBYdL4h.lottie' loop autoplay className='w-auto h-16 md:h-30 object-cover mx-1' />
+                            <DotLottieReact src='https://lottie.host/69f64cbb-9a22-45c5-872a-14e0a63849f0/VutfPYkIYF.lottie' loop autoplay className='w-auto h-16 md:h-30 object-cover mx-1' />
                         </div>
                         <Text variant='h1' weight='bold'>Master your days.</Text>
                     </div>
