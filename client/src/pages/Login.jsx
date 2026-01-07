@@ -4,7 +4,7 @@ import Buttons from "../components/Buttons.jsx";
 import { Activity, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth.js";
-import { ThreeDots } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 
 const Login = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
@@ -66,9 +66,9 @@ const Login = () => {
 
                         <Buttons type='submit' variant="primaryFW" disabled={loading}>
                             {loading ? (
-                                <span className="w-full h-auto flex items-end justify-center gap-2">
+                                <span className="w-full h-auto flex items-center justify-center gap-0">
+                                    <Oval width={20} height={20} color="#FFFFFF" />
                                     <span>Processing</span>
-                                    <ThreeDots width={20} height={10} color="#FFFFFF" radius={4} />
                                 </span>
                             ): (
                                 <span>Register Now</span>
