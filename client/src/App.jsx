@@ -7,6 +7,7 @@ import Tasks from './pages/Tasks.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path='/contact' element={<Layout><Contact /></Layout>} />
         <Route path='/login' element={<AuthLayout><Login /></AuthLayout>} />
         <Route path='/register' element={<AuthLayout><Register /></AuthLayout>} />
-        <Route path='/tasks' element={<Layout><Tasks /></Layout>} />
+        <Route path='/tasks' element={<ProtectedRoute><Layout><Tasks /></Layout></ProtectedRoute>} />
         <Route path='/*' element={<AuthLayout><PageNotFound /></AuthLayout>} />
       </Routes>
     </Router>

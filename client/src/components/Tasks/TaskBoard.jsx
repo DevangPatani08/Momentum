@@ -13,7 +13,7 @@ const TaskBoard = ({ tasks, onEdit, toggling, onDelete, onToggleComplete }) => {
         return () => clearInterval(interval);
     }, []);
 
-    const ctg = useMemo(() => { return ctgTasks(tasks || []); }, [tasks]);
+    const ctg = useMemo(() => { return ctgTasks(tasks || []); }, [tasks, currTime]);
 
     return (
         <div className='w-full flex-1 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 p-4'>

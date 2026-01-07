@@ -1,5 +1,5 @@
 export const checkOverdue = (task) => {
-    return new Date(task.deadline) < new Date() && !task.completed;
+    return task.deadline && !task.completed && new Date(task.deadline) < new Date();
 };
 
 export const sortTasks = (tasks) => {
@@ -9,8 +9,7 @@ export const sortTasks = (tasks) => {
     }));
 };
 
-export const ctgTasks = (tasks) => {
-    
+export const ctgTasks = (tasks) => {    
     return tasks.reduce((acc, task) => {
         task.completed ? (
             task.priority === 'right-now' ? acc.rightNow.push(task) : task.priority === 'complete-later' ? acc.completeLater.push(task) : acc.onConvenience.push(task)

@@ -20,16 +20,16 @@ const TaskForm = ({ isOpen, onClose, task, mode, onSubmit }) => {
             const hr = String(deadline.getHours()).padStart(2, '0');
             const min = String(deadline.getMinutes()).padStart(2, '0');
 
-            const formattedDeadline = !isNaN(deadline.getTime()) ? `${d}-${m}-${y}T${hr}:${min}` : '';
+            const formattedDeadline = !isNaN(deadline.getTime()) ? `${y}-${m}-${d}T${hr}:${min}` : '';
 
             return formattedDeadline;
         };
 
         const fake = () => {  
             if (task && mode === 'edit') {
-                setFormData({ message: task.message, priority: task.priority, deadline: formatDD(task.deadline) });
+                setFormData({ message: task.message, priority: task.priority || 'on-convenience', deadline: formatDD(task.deadline) });
             } else {
-                setFormData({ message: '', priority: '', deadline: '' });
+                setFormData({ message: '', priority: 'on-convenience', deadline: '' });
             }
             
             setErrors({});

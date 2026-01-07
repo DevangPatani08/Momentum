@@ -6,7 +6,7 @@ const r = exp.Router();
 
 r.get('/', auth, getTasks);
 r.post('/', auth, makeTask);
-r.put('/:id', updateTask);
+r.put('/:id', auth, updateTask);
 r.delete('/:id', auth, delTask);
 r.patch('/:id/toggle', auth, toggleStatus);
 
