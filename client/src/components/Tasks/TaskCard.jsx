@@ -92,8 +92,8 @@ const TaskCard = ({ task, toggling, onEdit, onDelete, onToggleComplete }) => {
                     <Text weight='medium' className={`line-clamp-2 ${task.completed ? 'line-through text-slate-500' : 'text-slate-900'}`}>{task.message}</Text>
                 </div>
                 <div className="flex items-center justify-between gap-2">
-                    <div className={`flex items-center justify-center gap-2 px-2 py-1 rounded-full text-sm text-slate-900 ${task.completed ? 'bg-transparent' : 'bg-orange-100'}`}>
-                        {task.completed ? (
+                    <div className={`flex items-center justify-center gap-2 px-2 py-1 rounded-full text-sm text-slate-900 ${task.completed || overdue ? 'bg-transparent' : 'bg-orange-100'}`}>
+                        {task.completed || overdue ? (
                             <span> </span>
                         ) : (
                             <>
