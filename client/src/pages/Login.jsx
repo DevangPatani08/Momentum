@@ -48,7 +48,7 @@ const Login = () => {
             navigate('/tasks');
             window.scrollTo({ top: 0, behavior: 'instant' });
         } catch (error) {
-            setErrors({ submit: error.response?.data?.message || error.message || 'Lofin failed. Please try again later!...' });
+            setErrors({ submit: error.response?.data?.message || error.message || 'Login failed. Please try again later!...' });
         } finally {
             setLoading(false);
         }
