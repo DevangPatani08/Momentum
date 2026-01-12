@@ -1,7 +1,7 @@
 import { Mail, User, Lock, EyeClosed, Eye } from "lucide-react";
 import { Activity } from "react";
 
-const InputField = ({ variant = '', type, name, id, placeholder, onChange, value, icon, showPass, setShowPass, errMsg, ...props }) => {
+const InputField = ({ variant = '', type, name, id, placeholder, onChange, value, icon, showPass, setShowPass, errMsg, disabled= false, ...props }) => {
     const Icons = { Mail: Mail, User: User, Lock: Lock };
     const Icon = Icons[icon];
     
@@ -14,7 +14,7 @@ const InputField = ({ variant = '', type, name, id, placeholder, onChange, value
                     <div className="absolute inset-y-0 z-50 left-0 pl-3 flex items-center pointer-events-none">
                         <Icon className='w-5 h-5 text-slate-500' />
                     </div>
-                    <input type={showPass ? 'text' : 'password'} name={name} id={id} placeholder={placeholder} onChange={onChange} value={value} className="input-field" {...props} />
+                    <input type={showPass ? 'text' : 'password'} name={name} id={id} placeholder={placeholder} onChange={onChange} value={value} className="input-field disabled:opacity-50 disabled:pointer-events-none" disabled={disabled} {...props} />
                     <button type="button" onClick={togglePassword} className="absolute inset-y-0 z-50 right-0 pr-6 flex items-center cursor-pointer">
                         {showPass ? (
                             <EyeClosed className="w-5 h-5 text-slate-500" />
@@ -35,7 +35,7 @@ const InputField = ({ variant = '', type, name, id, placeholder, onChange, value
                     <div className="absolute inset-y-0 z-50 left-0 pl-3 flex items-center pointer-events-none">
                         <Icon className='w-5 h-5 text-slate-500' />
                     </div>
-                    <input type={type} name={name} id={id} placeholder={placeholder} onChange={onChange} value={value} className="input-field" {...props} />
+                    <input type={type} name={name} id={id} placeholder={placeholder} onChange={onChange} value={value} className="input-field disabled:opacity-50 disabled:pointer-events-none" disabled={disabled} {...props} />
                 </div>
                 <Activity mode={errMsg ? 'visible' : 'hidden'}>
                     <span className="mt-1 text-sm text-red-500">{errMsg}</span>
