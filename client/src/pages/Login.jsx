@@ -60,9 +60,9 @@ const Login = () => {
                 <div className="w-full flex flex-col items-center justify-start max-w-xl gap-6 p-6 backdrop-blur-lg rounded-md shadow-lg">
                     <Text variant='h2' weight='bold' className="w-full text-center text-indigo-500">Login</Text>
                     <form onSubmit={handleSubmit} className="w-full flex flex-col items-start justify-center gap-4.5">
-                        <InputField type='email' icon='Mail' name='email' id='email' value={formData.email} onChange={handleChange} placeholder='Enter email (jhon.doe@gmail.com)' errMsg={errors.email} required />
+                        <InputField type='email' icon='Mail' name='email' id='email' value={formData.email} onChange={handleChange} placeholder='Enter email (jhon.doe@gmail.com)' errMsg={errors.email} disabled={loading} required />
                         
-                        <InputField variant='P' icon='Lock' name='password' id='password' value={formData.password} onChange={handleChange} placeholder='Enter password' errMsg={errors.password} showPass={showPass} setShowPass={setShowPass} required />
+                        <InputField variant='P' icon='Lock' name='password' id='password' value={formData.password} onChange={handleChange} placeholder='Enter password' errMsg={errors.password} showPass={showPass} setShowPass={setShowPass} disabled={loading} required />
 
                         <Buttons type='submit' variant="primaryFW" disabled={loading}>
                             {loading ? (

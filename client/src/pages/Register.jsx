@@ -115,15 +115,15 @@ const Register = () => {
                     <Text variant='h2' weight='bold' className="w-full text-center text-indigo-500">Register</Text>
                     <form onSubmit={handleSubmit} className="w-full flex flex-col items-start justify-center gap-4.5">
                         <div className="w-full flex items-start justify-center gap-4.5">
-                            <InputField type='text' icon='User' name='firstName' id='firstName' value={formData.firstName} onChange={handleChange} placeholder='First Name (Jhon)' errMsg={errors.firstName} required />
+                            <InputField type='text' icon='User' name='firstName' id='firstName' value={formData.firstName} onChange={handleChange} placeholder='First Name (Jhon)' errMsg={errors.firstName} disabled={loading} required />
                             
-                            <InputField type='text' icon='User' name='lastName' id='lastName' value={formData.lastName} onChange={handleChange} placeholder='Last Name (Doe)' errMsg={errors.lastName} required />
+                            <InputField type='text' icon='User' name='lastName' id='lastName' value={formData.lastName} onChange={handleChange} placeholder='Last Name (Doe)' errMsg={errors.lastName} disabled={loading} required />
                         </div>
 
-                        <InputField type='email' icon='Mail' name='email' id='email' value={formData.email} onChange={handleChange} placeholder='Enter email (jhon.doe@gmail.com)' errMsg={errors.email} required />
+                        <InputField type='email' icon='Mail' name='email' id='email' value={formData.email} onChange={handleChange} placeholder='Enter email (jhon.doe@gmail.com)' errMsg={errors.email} disabled={loading} required />
                         
                         <div className="w-full flex flex-col items-start justify-start">
-                            <InputField variant='P' icon='Lock' name='password' id='password' value={formData.password} onChange={handleChange} placeholder='Enter password' errMsg={errors.password} showPass={showPass} setShowPass={setShowPass} required />
+                            <InputField variant='P' icon='Lock' name='password' id='password' value={formData.password} onChange={handleChange} placeholder='Enter password' errMsg={errors.password} showPass={showPass} setShowPass={setShowPass} disabled={loading} required />
                             {formData.password && (
                                 <div className="w-full mt-2">
                                     <div className="flex justify-between text-xs mb-1">
@@ -138,7 +138,7 @@ const Register = () => {
                             )}
                         </div>
                         
-                        <InputField variant='P' icon='Lock' name='confirmPassword' id='confirmPassword' value={formData.confirmPassword} onChange={handleChange} placeholder='Confirm password' errMsg={errors.confirmPassword} showPass={showConfirmPass} setShowPass={setShowConfirmPass} required />
+                        <InputField variant='P' icon='Lock' name='confirmPassword' id='confirmPassword' value={formData.confirmPassword} onChange={handleChange} placeholder='Confirm password' errMsg={errors.confirmPassword} showPass={showConfirmPass} setShowPass={setShowConfirmPass} disabled={loading} required />
 
                         <Buttons type='submit' variant="primaryFW" disabled={loading}>
                             {loading ? (
